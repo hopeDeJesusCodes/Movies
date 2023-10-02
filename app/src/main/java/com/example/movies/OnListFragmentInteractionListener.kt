@@ -7,5 +7,7 @@ package com.example.movies
  * In this app, it's implemented by [MoviesFragment]
  */
 interface OnListFragmentInteractionListener {
+
+
     fun onItemClick(item: InTheatersMovie)
 }
