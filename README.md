@@ -29,13 +29,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-
-
-
-<img src='http://i.imgur.com/iGd8tIH.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-![](https://github.com/hopeDeJesusCodes/Movies/blob/master/Animation.gif)
 ![Video Walkthrough](http://i.imgur.com/iGd8tIH.gif)
-
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif
 <!-- Recommended tools:
