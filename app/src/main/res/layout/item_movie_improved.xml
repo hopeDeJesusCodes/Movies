@@ -39,6 +39,7 @@
             android:textColor="#FFFFFF"
             />
 
+
         <TextView
             android:id="@+id/movie_description"
             android:textColor="#FFFFFF"
