@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] popcorn background!
+- [x] popcorn background!
 
 ## Video Walkthrough
 
@@ -42,7 +42,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Had issues connecting to the API
 
 ## License
 
