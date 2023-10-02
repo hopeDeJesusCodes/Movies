@@ -22,7 +22,6 @@ private const val API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
 private const val TMDB_BASE_URL = "https://api.themoviedb.org/3/movie/now_playing"
 
 class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -70,18 +69,15 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
         }]
     }
 
-
     override fun onItemClick(item: InTheatersMovie) {
         Toast.makeText(context, "Movie: ${item.title}", Toast.LENGTH_LONG).show()
     }
 
-    private fun parseTmdbResponse(json: JsonHttpResponseHandler.JSON) {
-        // Assuming the JSON response is an array of movies under the key "results"
+    private fun parseTmdbResponse(json: JsonHttpResponseHandler.JSON): List<InTheatersMovie> {
         val resultsArray = json.jsonArray.optJSONArray("results")
+        val movies = mutableListOf<InTheatersMovie>()
 
         if (resultsArray != null) {
-            val movies = mutableListOf<MovieInfo>()
-
             for (i in 0 until resultsArray.length()) {
                 val movieObject = resultsArray.getJSONObject(i)
 
@@ -89,15 +85,17 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
                 val title = movieObject.optString("title")
                 val posterPath = movieObject.optString("poster_path")
 
-                // Create a MovieInfo object with the extracted data
-                val movieInfo = MovieInfo(title, posterPath)
+                // Create an InTheatersMovie object with the extracted data
+                // Use the index i as a unique ID, since we don't have real IDs
+                val movieInfo = InTheatersMovie(i, title, "Dummy Overview", posterPath)
 
-                // Add the MovieInfo object to the list of movies
+                // Add the InTheatersMovie object to the list of movies
                 movies.add(movieInfo)
             }
-
-            // At this point, the 'movies' list contains all movie data from the JSON response
-            // You can now use this list to update your RecyclerView
         }
+
+        return movies
     }
+
+
 }

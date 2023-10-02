@@ -7,13 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.gson.JsonObject // Example import for Gson
+
 
 /**
  * [RecyclerView.Adapter] that can display a [InTheatersMovie] and makes a call to the
  * specified [OnListFragmentInteractionListener].
  */
 class MovieInfo(
-    private val movieList: Unit, // Renamed parameter to movieList
+    private val movieList: List<InTheatersMovie>, // Change the parameter type to List<InTheatersMovie>
     private val mListener: OnListFragmentInteractionListener?
 ) : RecyclerView.Adapter<MovieInfo.MovieViewHolder>() {
 
@@ -33,7 +35,7 @@ class MovieInfo(
     }
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
-        val movie = movieList[position] // Updated to use movieList
+        val movie = movieList[position]
 
         holder.mMovieTitle.text = movie.title
 
@@ -48,6 +50,6 @@ class MovieInfo(
     }
 
     override fun getItemCount(): Int {
-        return movieList.size // Updated to use movieList
+        return movieList.size
     }
 }
