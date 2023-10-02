@@ -1,6 +1,6 @@
 # Android Project 3 - *Movie App*
 
-Submitted by: **Movie App**
+Submitted by: **Hope De Jesus**
 
 **Movie App** is a movie browsing app that allows users to browse movies currently playing in theaters.
 
@@ -46,7 +46,7 @@ Had issues connecting to the API
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [hope dejesus]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
